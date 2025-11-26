@@ -1,0 +1,107 @@
+{
+  "agent": "Custom:ProjectContextClarifier",
+  "shape": {
+    "project_title": "string",
+    "project_stage": "string",
+    "target_molecules": [
+      "string"
+    ],
+    "objectives": [
+      "string"
+    ],
+    "performance_metrics": [
+      "string"
+    ],
+    "constraints": {
+      "resources": [
+        "string"
+      ],
+      "timeline": "string",
+      "regulatory": [
+        "string"
+      ]
+    },
+    "missing_information": [
+      "string"
+    ],
+    "conflicts_or_risks": [
+      "string"
+    ],
+    "notes_for_downstream_agents": [
+      "string"
+    ]
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "project_title": {
+        "type": "string"
+      },
+      "project_stage": {
+        "type": "string"
+      },
+      "target_molecules": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "objectives": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "performance_metrics": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "constraints": {
+        "type": "object",
+        "properties": {
+          "resources": {
+            "type": "string"
+          },
+          "timeline": {
+            "type": "string"
+          },
+          "regulatory": {
+            "type": "string"
+          }
+        }
+      },
+      "missing_information": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "conflicts_or_risks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "notes_for_downstream_agents": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "project_title",
+      "project_stage",
+      "target_molecules",
+      "objectives",
+      "performance_metrics",
+      "constraints",
+      "missing_information",
+      "conflicts_or_risks",
+      "notes_for_downstream_agents"
+    ]
+  }
+}

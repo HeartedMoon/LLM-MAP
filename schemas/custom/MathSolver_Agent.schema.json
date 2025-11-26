@@ -1,0 +1,115 @@
+{
+  "agent": "MathSolver Agent",
+  "shape": {
+    "governing_equations": [
+      "string"
+    ],
+    "boundary_conditions": [
+      "string"
+    ],
+    "assumptions": [
+      "string"
+    ],
+    "material_parameters": {
+      "conductivity": "number",
+      "charge_density": "number",
+      "other_parameters": [
+        "string"
+      ]
+    },
+    "geometry_description": "string",
+    "dimensionless_parameters": {
+      "names": [
+        "string"
+      ],
+      "definitions": [
+        "string"
+      ]
+    },
+    "simplified_form": [
+      "string"
+    ],
+    "verification_notes": [
+      "string"
+    ],
+    "output_format_version": "string"
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "governing_equations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "boundary_conditions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "assumptions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "material_parameters": {
+        "type": "object",
+        "properties": {
+          "conductivity": {
+            "type": "number"
+          },
+          "charge_density": {
+            "type": "number"
+          },
+          "other_parameters": {
+            "type": "string"
+          }
+        }
+      },
+      "geometry_description": {
+        "type": "string"
+      },
+      "dimensionless_parameters": {
+        "type": "object",
+        "properties": {
+          "names": {
+            "type": "string"
+          },
+          "definitions": {
+            "type": "string"
+          }
+        }
+      },
+      "simplified_form": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "verification_notes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "output_format_version": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "governing_equations",
+      "boundary_conditions",
+      "assumptions",
+      "material_parameters",
+      "geometry_description",
+      "dimensionless_parameters",
+      "simplified_form",
+      "verification_notes",
+      "output_format_version"
+    ]
+  }
+}

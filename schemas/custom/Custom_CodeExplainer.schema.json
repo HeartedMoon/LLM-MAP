@@ -1,0 +1,68 @@
+{
+  "agent": "Custom:CodeExplainer",
+  "shape": {
+    "code_snippet": "string",
+    "context": "string",
+    "step_by_step_explanation": [
+      "string"
+    ],
+    "final_behavior": "string",
+    "potential_pitfalls": [
+      "string"
+    ],
+    "intended_functionality_alignment": "string",
+    "examples_of_effect": [
+      "string"
+    ],
+    "complexity_level": "string"
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "code_snippet": {
+        "type": "string"
+      },
+      "context": {
+        "type": "string"
+      },
+      "step_by_step_explanation": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "final_behavior": {
+        "type": "string"
+      },
+      "potential_pitfalls": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "intended_functionality_alignment": {
+        "type": "string"
+      },
+      "examples_of_effect": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "complexity_level": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "code_snippet",
+      "context",
+      "step_by_step_explanation",
+      "final_behavior",
+      "potential_pitfalls",
+      "intended_functionality_alignment",
+      "examples_of_effect",
+      "complexity_level"
+    ]
+  }
+}

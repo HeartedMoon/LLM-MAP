@@ -1,0 +1,14 @@
+{
+  "core_auto_rag": "",
+  "turn_agents": {},
+  "agent_roles": {},
+  "current_agent": null,
+  "chat": {
+    "core": [],
+    "agents": {}
+  },
+  "turn_core": 0,
+  "proc_log": [],
+  "page": "core",
+  "core_suggest": null
+}

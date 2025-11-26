@@ -1,0 +1,70 @@
+{
+  "agent": "Literature Searcher (targeted on Li2CO3 precipitation from Li/K-rich solutions)",
+  "shape": {
+    "source_reference": "string",
+    "precipitation_method": "string",
+    "operating_conditions": {
+      "temperature_C": "number",
+      "pH": "number",
+      "additives": [
+        "string"
+      ]
+    },
+    "lithium_recovery_efficiency_percent": "number",
+    "product_purity_percent": "number",
+    "Li_over_K/Na_ratio_in _feedstock": "number",
+    "scalability_notes": "string",
+    "sole/integrated_research_on_precipitation_and_washing": "string"
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "source_reference": {
+        "type": "string"
+      },
+      "precipitation_method": {
+        "type": "string"
+      },
+      "operating_conditions": {
+        "type": "object",
+        "properties": {
+          "temperature_C": {
+            "type": "number"
+          },
+          "pH": {
+            "type": "number"
+          },
+          "additives": {
+            "type": "string"
+          }
+        }
+      },
+      "lithium_recovery_efficiency_percent": {
+        "type": "number"
+      },
+      "product_purity_percent": {
+        "type": "number"
+      },
+      "Li_over_K/Na_ratio_in _feedstock": {
+        "type": "number"
+      },
+      "scalability_notes": {
+        "type": "string"
+      },
+      "sole/integrated_research_on_precipitation_and_washing": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "source_reference",
+      "precipitation_method",
+      "operating_conditions",
+      "lithium_recovery_efficiency_percent",
+      "product_purity_percent",
+      "Li_over_K/Na_ratio_in _feedstock",
+      "scalability_notes",
+      "sole/integrated_research_on_precipitation_and_washing"
+    ]
+  }
+}

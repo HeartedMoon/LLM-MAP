@@ -1,0 +1,56 @@
+{
+  "agent": "Literature Searcher",
+  "shape": {
+    "title": "string",
+    "notes": "string",
+    "doi": "string",
+    "papers": [],
+    "key_findings": "string",
+    "summary": "string",
+    "recommendations": [
+      "string"
+    ]
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "doi": {
+        "type": "string"
+      },
+      "papers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "key_findings": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "recommendations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "title",
+      "notes",
+      "doi",
+      "papers",
+      "key_findings",
+      "summary",
+      "recommendations"
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "agent": "Custom:CareerPlanner",
+  "shape": {
+    "career_goals": [
+      "string"
+    ],
+    "budget_constraints": "number",
+    "preferred_locations": [
+      "string"
+    ],
+    "target_companies_or_institutions": [
+      "string"
+    ],
+    "event_listings": [
+      {
+        "event_name": "string",
+        "event_type": "string",
+        "location": "string",
+        "dates": "string",
+        "relevance_score": "number"
+      }
+    ],
+    "itinerary": [
+      {
+        "event_name": "string",
+        "sessions_to_attend": [
+          "string"
+        ],
+        "priority_stakeholders": [
+          "string"
+        ],
+        "scheduled_meetings": [
+          "string"
+        ]
+      }
+    ],
+    "networking_strategies": [
+      "string"
+    ],
+    "resource_allocation_plan": {
+      "time_distribution": "string",
+      "budget_distribution": "string"
+    },
+    "expected_outcomes": [
+      "string"
+    ]
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "career_goals": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "budget_constraints": {
+        "type": "number"
+      },
+      "preferred_locations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "target_companies_or_institutions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "event_listings": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "itinerary": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "networking_strategies": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "resource_allocation_plan": {
+        "type": "object",
+        "properties": {
+          "time_distribution": {
+            "type": "string"
+          },
+          "budget_distribution": {
+            "type": "string"
+          }
+        }
+      },
+      "expected_outcomes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "career_goals",
+      "budget_constraints",
+      "preferred_locations",
+      "target_companies_or_institutions",
+      "event_listings",
+      "itinerary",
+      "networking_strategies",
+      "resource_allocation_plan",
+      "expected_outcomes"
+    ]
+  }
+}

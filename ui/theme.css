@@ -1,0 +1,16 @@
+:root {
+  --radius:14px; --accent:#2563EB; --bg:#ffffff;
+  --panel:#F3F4F6; --card:#ffffff; --text:#111827;
+  --muted:#6B7280; --border:#E5E7EB;
+}
+html, body, [data-testid='stAppViewContainer'] { background: var(--bg); }
+.llm4pdg-hero { background: linear-gradient(90deg, rgba(37,99,235,.08), rgba(255,255,255,0));
+  padding:16px 14px; border-radius:var(--radius); border:1px solid var(--border); }
+.llm4pdg-chip { display:inline-block; font-size:12px; padding:2px 8px;
+  border-radius:999px; border:1px solid var(--border); color:var(--text);
+  margin-right:6px; background:#f8fafc; }
+.llm4pdg-card { background: var(--card); border-radius:var(--radius);
+  border:1px solid var(--border); padding:12px; }
+.llm4pdg-btn { background:var(--accent); color:white; padding:8px 12px;
+  border-radius:10px; border:none; }
+.llm4pdg-muted { color:var(--muted); }

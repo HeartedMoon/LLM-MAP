@@ -1,0 +1,54 @@
+# core/keywords.yaml
+stopwords_en:
+  - the; a; an; of; in; on; to; for; with; into; from; by; at; as; about; over; under
+  - and; or; if; then; else; is; are; was; were; be; being; been
+  - can; could; should; would; may; might; will; shall; do; does; did
+  - this; that; these; those; it; its; their; there; here; such
+  - using; use; via; method; methods; based; study; studies; approach; approaches
+  - result; results; effect; effects; analysis; evaluation; discussion; conclusion
+  - data; figure; table; supplementary; note; notes
+
+stopwords_zh:
+  - 的; 了; 和; 与; 及; 或; 而; 但; 被; 在; 从; 对; 于; 将; 为; 因; 因为; 因此; 所以; 由于; 根据
+  - 其中; 同时; 以及; 等; 等等; 等等；; 等.; 等、; 等、等; 等与; 各; 每; 本文; 本研究
+  - 可以; 能够; 需要; 必须; 进行; 采用; 使用; 利用; 给出; 给定; 得到; 实现; 提出
+  - 方法; 研究; 实验; 数据; 结果; 分析; 影响; 优化; 讨论; 综述; 概述
+  - 通过; 对比; 比较; 测试; 验证; 建模; 模型; 参数; 条件
+  - 例如; 比如; 如; 如下; 上述; 下述; 分别; 主要; 一种; 一类; 一般
+  - 我们; 他们; 其; 该; 此; 这; 这些; 那些; 本; 该文; 该方法; 该工艺
+
+domain_must:
+  # 化学式/核心物种
+  - LiFePO4; LFP; FeCl3; FeCl2; Li2CO3; Li2CO₃; LiOH; LiCl; Li2SO4; HCl; H2SO4; HNO3
+  - Na2CO3; NaHCO3; NH4HCO3; NH3; NaOH; K2CO3; KOH; EDTA; citric acid; oxalic acid
+  - ferric chloride; ferrous chloride; iron phosphate
+  # 回收/浸出/碳酸锂话题锚
+  - hydrometallurgy; leaching; selective leaching; oxidative leaching
+  - precipitation; carbonation; crystallization; washing; solid-liquid separation
+  - Li2CO3 purification; recrystallization; re-precipitation
+  - 循环浸出; 盐浸; 氧化; 还原; 固液分离; 结晶; 沉淀; 洗涤; 再沉淀; 重结晶; 冷却结晶; 蒸发结晶
+  - 磷酸铁锂；磷酸铁；碳酸锂; 氢氧化锂; 碳酸钠; 碳酸氢钠; 碳酸氢铵; 氨; 草酸; 柠檬酸; 络合; 萃取
+  # 工艺关键变量
+  - pH; 温度; 浓度; 料液比; 停留时间; 搅拌; 过饱和; 溶度积; Ksp
+  # 杂质/分离
+  - impurity; impurities; purity; selectivity; yield; recovery
+  - Fe; P; Al; Cu; Ni; Mn; Co; Mg; Ca; Na; K; S; Cl; F; Si
+  - ion exchange; membrane; nanofiltration; ultrafiltration; reverse osmosis
+  # 动力学/机理
+  - kinetics; thermodynamics; diffusion; mass transfer; shrinking core model; activation energy
+  - 动力学; 热力学; 传质; 扩散; 收缩核模型; 表观活化能
+  # 设备/单元
+  - reactor; crystallizer; centrifuge; filter; dryer; rotary evaporator
+  - 反应釜; 结晶器; 离心机; 过滤机; 干燥器; 旋蒸
+  # 评价/ESG
+  - cost; energy consumption; environmental; wastewater; waste gas; solid waste; E-factor
+  - 成本; 能耗; 环保; 废水; 废气; 固废; 碳足迹
+
+domain_any:
+  # 扩展主题（放宽）
+  - battery; batteries; cathode; recycling; regeneration; process; process optimization
+  - kinetics analysis; thermodynamic analysis; phase; solubility; soda ash; ammonia; seed
+  - filtration; rinsing; mother liquor; liquor recycle; bleed; impurity purge
+  - 正极; 回收; 再生; 工艺; 优化; 工艺集成; 多目标优化; 多级逆流; 洗涤比; 夹带; 滞留
+  - 复杂体系; 相平衡; 活度; 溶解度; 晶型; 晶核; 籽晶; 诱导期
+  - 过氧化氢; 高锰酸钾; 次氯酸钠; 臭氧; 氯气; 氧气; 二氧化碳; 空气

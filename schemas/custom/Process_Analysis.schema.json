@@ -1,0 +1,94 @@
+{
+  "agent": "Process Analysis",
+  "shape": {
+    "method_name": "string",
+    "mechanism_summary": "string",
+    "operating_conditions": {
+      "temperature_range": "string",
+      "pressure_range": "string",
+      "pH_range": "string"
+    },
+    "efficiency_metrics": {
+      "extraction_yield_percent": "number",
+      "processing_time_hours": "number"
+    },
+    "scalability_assessment": "string",
+    "environmental_impact": "string",
+    "advantages": [
+      "string"
+    ],
+    "limitations": [
+      "string"
+    ],
+    "suitability_for_project": "string"
+  },
+  "jsonschema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "method_name": {
+        "type": "string"
+      },
+      "mechanism_summary": {
+        "type": "string"
+      },
+      "operating_conditions": {
+        "type": "object",
+        "properties": {
+          "temperature_range": {
+            "type": "string"
+          },
+          "pressure_range": {
+            "type": "string"
+          },
+          "pH_range": {
+            "type": "string"
+          }
+        }
+      },
+      "efficiency_metrics": {
+        "type": "object",
+        "properties": {
+          "extraction_yield_percent": {
+            "type": "number"
+          },
+          "processing_time_hours": {
+            "type": "number"
+          }
+        }
+      },
+      "scalability_assessment": {
+        "type": "string"
+      },
+      "environmental_impact": {
+        "type": "string"
+      },
+      "advantages": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "limitations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "suitability_for_project": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "method_name",
+      "mechanism_summary",
+      "operating_conditions",
+      "efficiency_metrics",
+      "scalability_assessment",
+      "environmental_impact",
+      "advantages",
+      "limitations",
+      "suitability_for_project"
+    ]
+  }
+}
