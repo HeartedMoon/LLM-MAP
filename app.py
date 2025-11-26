@@ -263,18 +263,37 @@ def _build_jsonl(paths:list) -> bytes:
 # ---------- Sidebar ----------
 # --- logo on top ---
 st.sidebar.image("./ui/logo.svg", use_container_width=True)
-if not os.environ.get("OPENAI_API_KEY"):
-    with st.sidebar:
+# 初始化 session state
+if "user_api_key" not in st.session_state:
+    st.session_state.user_api_key = ""
+
+# 始终在侧边栏显示 API 密钥管理
+with st.sidebar:
+    st.markdown("### 🔑 API Settings")
+    
+    if st.session_state.user_api_key or os.environ.get("OPENAI_API_KEY"):
+        st.success("✅ API Key is set")
+        if st.button("Change API Key"):
+            st.session_state.user_api_key = ""
+            if "OPENAI_API_KEY" in os.environ:
+                del os.environ["OPENAI_API_KEY"]
+    else:
         api_key = st.text_input(
-            "🔑 OpenAI API Key",
+            "Enter OpenAI API Key",
             type="password",
+            placeholder="sk-...",
             help="Get from: https://platform.openai.com/api-keys"
         )
+        
         if api_key:
+            st.session_state.user_api_key = api_key
             os.environ["OPENAI_API_KEY"] = api_key
-            st.rerun()
-        else:
-            st.info("👆 Enter your API key to start")
+            st.success("✅ API Key set successfully!")
+
+# 检查是否有可用的 API 密钥
+if not os.environ.get("OPENAI_API_KEY") and not st.session_state.user_api_key:
+    st.warning("🔑 Please set your OpenAI API Key in the sidebar to continue")
+    st.stop()
 
 models = load_model_list()
 model = st.sidebar.selectbox("Model", models or ["gpt-5-chat-latest"], index=0)
