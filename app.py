@@ -2,7 +2,7 @@ import io, os, sys, json, time, tempfile, zipfile
 from pathlib import Path
 import pandas as pd
 import streamlit as st
-import datetime
+from datetime import datetime
 from core.dyn_schema import get_schema, save_schema, load_or_propose_schema
 from streamlit_extras.stylable_container import stylable_container
 
