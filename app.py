@@ -263,6 +263,18 @@ def _build_jsonl(paths:list) -> bytes:
 # ---------- Sidebar ----------
 # --- logo on top ---
 st.sidebar.image("./ui/logo.svg", use_container_width=True)
+if not os.environ.get("OPENAI_API_KEY"):
+    with st.sidebar:
+        api_key = st.text_input(
+            "🔑 OpenAI API Key",
+            type="password",
+            help="Get from: https://platform.openai.com/api-keys"
+        )
+        if api_key:
+            os.environ["OPENAI_API_KEY"] = api_key
+            st.rerun()
+        else:
+            st.info("👆 Enter your API key to start")
 
 models = load_model_list()
 model = st.sidebar.selectbox("Model", models or ["gpt-5-chat-latest"], index=0)
